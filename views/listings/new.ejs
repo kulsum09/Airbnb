@@ -3,12 +3,12 @@
   <div class="col-8 offset-2">
     <br><br>
     <h3>Create a New Listing</h3>
-    <form method="POST" action="/listings" novalidate class="needs-validation">
+    <form method="POST" action="/listings">
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
         <input name="listing[title]" placeholder="enter title" type="text" class="form-control" required
         />
-        <div class="valid-feedback">Title looks good</div>
+        <!-- <div class="valid-feedback">Title looks good</div> -->
       </div>
 
       <div class="mb-3">
@@ -16,8 +16,6 @@
         <textarea
         name="listing[description]"
         class="form-control" required></textarea>
-                 <div class="invalid-feedback"> please enter the description</div>
-
       </div>
       
       <div class="mb-3">
@@ -32,14 +30,14 @@
       <div class="row">
         <div class="mb-3 col-md-4">
          <label for="price" class="form-label">Price</label>
-         <input name="listing[price]" placeholder="enter price" class="form-control" required/>
-         <div class="invalid-feedback"> please enter the number</div>
+         <input name="listing[price]" placeholder="enter price" type="number" class="form-control" required/>
+         <!-- <div class="invalid-feedback"> please enter the number</div> -->
         </div>
 
         <div class="mb-3 col-md-8">
          <label for="country" class="form-label">Country</label>
          <input name="listing[country]" placeholder="enter country" type="text" class="form-control" required/>
-                  <div class="invalid-feedback"> please enter the country name</div>
+                  <!-- <div class="invalid-feedback"> please enter the country name</div> -->
 
         </div>
       </div>
@@ -52,7 +50,7 @@
         placeholder="enter location"
         type="text"
         class="form-control" required/>
-        <div class="invalid-feedback"> please enter the location</div>
+        <!-- <div class="invalid-feedback"> please enter the location</div> -->
 
       </div>
       

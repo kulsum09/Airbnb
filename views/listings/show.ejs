@@ -39,11 +39,21 @@
 
         <div class="mb-3 mt-3">
           <label for="comment" class="form-lable">Comments</label>
-          <textarea name="review[comment]" id="comment" cols="30" rows="5" class="form-control"></textarea>
+          <textarea name="review[comment]" id="comment" cols="30" rows="5" class="form-control" required></textarea>
+          <!-- <div class="invalid-feedback">Please submit</div> -->
         </div>
        <button class="btn btn-outline-dark">Submit</button>
 
       </form>
+      <hr>
+
+      <h4>All Reviews</h4>
+      <ul>
+      <% for( review of listing.reviews ) {%>
+        <li><%= review.comment %>, <%= review.rating %>stars</li>
+
+      <% } %>
+      </ul>
     </div>
  </div>
   
