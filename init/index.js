@@ -27,7 +27,11 @@ initData.data = initData.data.map((obj) => {
   console.log("IMAGE BEFORE:", obj.image);
   return {
     ...obj,
-    image: obj.image.url,   // ⬅️ VERY IMPORTANT
+    image: {
+  url: obj.image.url,
+  filename: obj.image.filename
+   },
+   // ⬅️ VERY IMPORTANT
     owner: new mongoose.Types.ObjectId("694bd93d8956d0a0471bee9b"),
   };
 });
